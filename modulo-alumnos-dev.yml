@@ -15,6 +15,14 @@ eureka:
   instance:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 10
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret-key: "tilin"
+
 ---
 spring:
   config:
