@@ -10,6 +10,11 @@ spring:
       server:
         webmvc:
           routes:
+            - id: modulo-auth
+              uri: lb://AUTH
+              predicates:
+                - Path=/auth/**
+
             - id: modulo-alumnos
               uri: lb://modulo-alumnos
               predicates:
