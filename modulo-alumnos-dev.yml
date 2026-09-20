@@ -21,7 +21,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          secret-key: "tilin"
+          secret-key: "implementacionspringsecurity-tilin"
 
 ---
 spring:
