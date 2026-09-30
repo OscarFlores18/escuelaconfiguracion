@@ -1,5 +1,6 @@
 server:
   port: 8084
+
 management:
   endpoints:
     web:
@@ -8,6 +9,7 @@ management:
   endpoint:
     health:
       show-details: always
+
 eureka:
   client:
     service-url:
@@ -22,6 +24,9 @@ spring:
       resourceserver:
         jwt:
           secret-key: "implementacionspringsecurity-tilin"
+
+gateway:
+  secret: "MI-SECRETO-GATEWAY"
 
 ---
 spring:
