@@ -26,7 +26,7 @@ spring:
           secret-key: "implementacionspringsecurity-tilin"
 
 gateway:
-  secret: "MI-SECRETO-GATEWAY"
+  secret: "Ojodondemiraschamoetoesecret"
 
 ---
 spring:
