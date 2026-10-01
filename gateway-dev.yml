@@ -42,4 +42,4 @@ eureka:
     lease-renewal-interval-in-seconds: 10
 
 gateway:
-  secret: "mi-secret-gateway-2026"
+  secret: "Ojodondemiraschamoetoesecret"
