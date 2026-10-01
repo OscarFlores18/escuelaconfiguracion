@@ -10,6 +10,7 @@ spring:
       server:
         webmvc:
           routes:
+
             - id: modulo-auth
               uri: lb://AUTH
               predicates:
@@ -19,6 +20,8 @@ spring:
               uri: lb://modulo-alumnos
               predicates:
                 - Path=/alumnos/**
+              filters:
+                - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
 
             - id: modulo-cursos
               uri: lb://modulo-cursos
@@ -37,3 +40,6 @@ eureka:
 
   instance:
     lease-renewal-interval-in-seconds: 10
+
+gateway:
+  secret: "mi-secret-gateway-2026"
