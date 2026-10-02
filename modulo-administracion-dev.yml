@@ -23,7 +23,7 @@ spring:
         jwt:
           secret-key: "implementacionspringsecurity-tilin"
 gateway:
-  secret: "mi-secret-gateway-2026"
+  secret: "Ojodondemiraschamoetoesecret"
           
 ---
 spring:
