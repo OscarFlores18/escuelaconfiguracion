@@ -40,7 +40,7 @@ spring:
             - id: swagger-alumno
               uri: lb://modulo-alumnos
               predicates:
-                - Path=/swagger-alumno/**
+                - Path=/alumno/**
               filters:
                 - StripPrefix=1
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
@@ -48,7 +48,7 @@ spring:
             - id: swagger-cursos
               uri: lb://modulo-cursos
               predicates:
-                - Path=/swagger-cursos/**
+                - Path=/curso/**
               filters:
                 - StripPrefix=1
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
@@ -56,7 +56,7 @@ spring:
             - id: swagger-administracion
               uri: lb://modulo-administracion
               predicates:
-                - Path=/swagger-administracion/**
+                - Path=/administracion/**
               filters:
                 - StripPrefix=1
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
