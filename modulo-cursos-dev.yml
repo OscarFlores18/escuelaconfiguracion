@@ -22,10 +22,9 @@ spring:
       resourceserver:
         jwt:
           secret-key: "implementacionspringsecurity-tilin"
-          
-app:
-  security:
-    gateway-secret: "Ojodondemiraschamoetoesecret"
+
+gateway:
+  secret: "Ojodondemiraschamoetoesecret"
 
 ---
 spring:
