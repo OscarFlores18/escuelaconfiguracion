@@ -27,10 +27,6 @@ spring:
 
 gateway:
   secret: "Ojodondemiraschamoetoesecret"
-
-app:
-  security:
-    gateway-secret: "Ojodondemiraschamoetoesecret"
     
 ---
 spring:
