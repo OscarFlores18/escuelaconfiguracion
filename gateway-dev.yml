@@ -22,19 +22,43 @@ spring:
                 - Path=/alumnos/**
               filters:
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
-            
+
             - id: modulo-cursos
               uri: lb://modulo-cursos
               predicates:
                 - Path=/cursos/**
               filters:
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
-            
+
             - id: modulo-administracion
               uri: lb://modulo-administracion
               predicates:
                 - Path=/personal/**
               filters:
+                - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
+
+            - id: swagger-alumno
+              uri: lb://modulo-alumnos
+              predicates:
+                - Path=/swagger-alumno/**
+              filters:
+                - StripPrefix=1
+                - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
+
+            - id: swagger-cursos
+              uri: lb://modulo-cursos
+              predicates:
+                - Path=/swagger-cursos/**
+              filters:
+                - StripPrefix=1
+                - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
+
+            - id: swagger-administracion
+              uri: lb://modulo-administracion
+              predicates:
+                - Path=/swagger-administracion/**
+              filters:
+                - StripPrefix=1
                 - AddRequestHeader=X-Gateway-Secret, ${gateway.secret}
 
 eureka:
